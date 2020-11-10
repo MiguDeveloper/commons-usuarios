@@ -35,6 +35,8 @@ public class Usuario implements Serializable {
             uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "role_id"})})
     private List<Role> roles;
 
+    private int intentos;
+
     private static final long serialVersionUID = -3755531061133780919L;
 
     public String getNombre() {
@@ -99,5 +101,13 @@ public class Usuario implements Serializable {
 
     public void setEnable(boolean enable) {
         this.enable = enable;
+    }
+
+    public int getIntentos() {
+        return intentos;
+    }
+
+    public void setIntentos(int intentos) {
+        this.intentos = intentos;
     }
 }
